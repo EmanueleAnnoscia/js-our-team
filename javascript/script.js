@@ -46,7 +46,7 @@ const teamContainer= document.querySelector("#card-container");
 const newCard = (member) =>{
   const {name, role, img} = member;
 
-  return  `<div class="col-12 col-md-4 col-lg-4">
+  return  `<div class="col-12 col-md-4 col-lg-4 mb-4 ">
               <img src="${img}" class="card-img" alt="${name}">
             </div>
             <div class="col-md-8">
