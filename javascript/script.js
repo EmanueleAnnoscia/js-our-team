@@ -74,21 +74,22 @@ renderTeam(teamMembers);
 
 const formElem = document.querySelector("form")
 
-form.addEventListener("submit", (event) =>{
+formElem.addEventListener("submit", (event) =>{
     event.preventDefault(); //interrompo il refresh del form
-    const name = document.getElementById("name")
-    const surname = document.getElementById("surname")
-    const role = document.getElementById("role")
+    const nameVal = document.querySelector("#name").value
+    const surnameVal = document.querySelector("#surname").value
+    const roleVal = document.querySelector("#role").value
 
   // da questi valori creo un nuovo oggetto
 
   const addMember = {
-    name,
-    surname,
-    role
-
+    name:nameVal,
+    surname:surnameVal,
+    role:roleVal
   }
 
-  teamMemebers.push(addMember)
+  teamMembers.push(addMember)
+
+  renderTeam(teamMembers)
 
 })
